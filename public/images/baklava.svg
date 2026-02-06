@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160">
+  <rect width="100%" height="100%" fill="#fff7ed"/>
+  <g fill="#f97316">
+    <rect x="30" y="40" width="180" height="30" rx="4"/>
+    <rect x="30" y="76" width="180" height="30" rx="4"/>
+  </g>
+  <text x="120" y="120" font-size="14" text-anchor="middle" fill="#7c2d12" font-family="sans-serif">بقلاوة — Baklava</text>
+</svg>

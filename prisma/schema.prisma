@@ -1,0 +1,45 @@
+// إعدادات قاعدة البيانات
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite" // أو postgresql حسب ما تستخدم
+  url      = env("DATABASE_URL")
+}
+
+// نموذج المستخدم (بائع أو مشتري)
+model User {
+  id       String    @id @default(uuid())
+  name     String
+  email    String    @unique
+  password String
+  role     String    @default("USER") // "USER" أو "SELLER"
+  products Product[] // العلاقة مع المنتجات التي يضيفها البائع
+}
+
+// نموذج المنتج مع حقل التصنيف (Category)
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  price       Float
+  image       String?
+  category    String   @default("Other") // الحقل الجديد الذي أضفناه للتصنيفات
+  sellerId    String
+  seller      User     @relation(fields: [sellerId], references: [id])
+  createdAt   DateTime @default(now())
+  orders      Order[]
+}
+
+// نموذج الطلب مع بيانات الزبون وحالته
+model Order {
+  id            String   @id @default(uuid())
+  customerName  String
+  customerPhone String
+  customerCity  String?
+  status        String   @default("PENDING") // PENDING, DONE
+  productId     String
+  product       Product  @relation(fields: [productId], references: [id])
+  createdAt     DateTime @default(now())
+}
