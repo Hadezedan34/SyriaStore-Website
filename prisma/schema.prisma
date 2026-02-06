@@ -10,7 +10,7 @@ datasource db {
 
 // نموذج المستخدم (بائع أو مشتري)
 model User {
-  id       String    @id @default(uuid())
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
   name     String
   email    String    @unique
   password String
@@ -20,7 +20,7 @@ model User {
 
 // نموذج المنتج مع حقل التصنيف (Category)
 model Product {
-  id          String   @id @default(uuid())
+ id    String @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   description String?
   price       Float
