@@ -34,6 +34,8 @@ export default function RegisterPage() {
       // توجيه المستخدم للصفحة الرئيسية وتحديث الموقع ليظهر الاسم فوراً
       router.push('/')
       router.refresh() 
+      window.location.reload();
+      
 
     } catch (err) {
       setError('حدث خطأ غير متوقع')
