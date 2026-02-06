@@ -4,13 +4,13 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite" // أو postgresql حسب ما تستخدم
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 // نموذج المستخدم (بائع أو مشتري)
 model User {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
   name     String
   email    String    @unique
   password String
@@ -18,28 +18,28 @@ model User {
   products Product[] // العلاقة مع المنتجات التي يضيفها البائع
 }
 
-// نموذج المنتج مع حقل التصنيف (Category)
+// نموذج المنتج
 model Product {
- id    String @id @default(auto()) @map("_id") @db.ObjectId
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   description String?
   price       Float
   image       String?
-  category    String   @default("Other") // الحقل الجديد الذي أضفناه للتصنيفات
-  sellerId    String
+  category    String   @default("Other")
+  sellerId    String   @db.ObjectId
   seller      User     @relation(fields: [sellerId], references: [id])
   createdAt   DateTime @default(now())
   orders      Order[]
 }
 
-// نموذج الطلب مع بيانات الزبون وحالته
+// نموذج الطلب (تعديل الـ ID والـ productId ليتوافق مع MongoDB)
 model Order {
-  id            String   @id @default(uuid())
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
   customerName  String
   customerPhone String
   customerCity  String?
   status        String   @default("PENDING") // PENDING, DONE
-  productId     String
+  productId     String   @db.ObjectId
   product       Product  @relation(fields: [productId], references: [id])
   createdAt     DateTime @default(now())
 }
