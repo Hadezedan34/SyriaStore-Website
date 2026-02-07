@@ -16,8 +16,8 @@ export default function SellerDashboard() {
   // قائمة الأصناف - عدلها حسب رغبتك
   const categories = [
     { id: 'Electronics', label: 'إلكترونيات' },
-    { id: 'Home Furnutre', label: 'منزل' },
-    { id: 'Vevhiles', label: 'مركبات' },
+    { id: 'Home', label: 'منزل' },
+    { id: 'Vehicles', label: 'مركبات' },
     { id: 'Food', label: 'طعام' },
     { id: 'HomeMade', label: 'صناعات يدوية' },
     { id: 'Other', label: 'أخرى' }

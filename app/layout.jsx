@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { CartProvider } from '../components/CartContext'
 
 export const metadata = {
+  viewport: 'width=device-width, initial-scale=1',
   title: 'SyriaStore | متجر سوريا',
   description: 'منصة التسوق الإلكتروني الأولى',
 }
