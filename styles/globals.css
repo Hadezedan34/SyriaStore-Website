@@ -10,10 +10,6 @@ body {
   @apply bg-white text-gray-900 antialiased;
 }
 
-/* Make default link and accent colors use the Syria palette */
-a {
-  @apply text-syria-navy;
-}
 
 
 /* small helper */

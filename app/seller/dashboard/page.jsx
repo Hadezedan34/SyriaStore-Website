@@ -16,9 +16,10 @@ export default function SellerDashboard() {
   // قائمة الأصناف - عدلها حسب رغبتك
   const categories = [
     { id: 'Electronics', label: 'إلكترونيات' },
-    { id: 'Accessories', label: 'إكسسوارات' },
-    { id: 'Phones', label: 'موبايلات' },
-    { id: 'Laptops', label: 'كمبيوترات' },
+    { id: 'Home Furnutre', label: 'منزل' },
+    { id: 'Vevhiles', label: 'مركبات' },
+    { id: 'Food', label: 'طعام' },
+    { id: 'HomeMade', label: 'صناعات يدوية' },
     { id: 'Other', label: 'أخرى' }
   ];
 
@@ -240,6 +241,6 @@ export default function SellerDashboard() {
           </section>
         </div>
       </div>
-    </div>
+    </div>//sadasdasdasd
   )
 }
