@@ -49,8 +49,8 @@ export default async function ProductDetails({ params }) {
             </div>
 
             <div className="mt-auto pt-8 space-y-4">
-              {/* تمرير المنتج مع التأكد أن p صغيرة */}
-             // ابحث عن مكان وضع الزر واستبدله بهذا السطر:
+              {}
+          
 <AddToCartButton product={{ id: product.id, name: product.name }} />
               <p className="text-center text-sm text-gray-400">توصيل متوفر لجميع المحافظات السورية 🇸🇾</p>
             </div>

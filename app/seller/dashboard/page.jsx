@@ -13,7 +13,7 @@ export default function SellerDashboard() {
   const [orders, setOrders] = useState([])
   const [myProducts, setMyProducts] = useState([])
 
-  // قائمة الأصناف - عدلها حسب رغبتك
+ 
   const categories = [
     { id: 'Electronics', label: 'إلكترونيات' },
     { id: 'Home', label: 'منزل' },
@@ -72,7 +72,7 @@ export default function SellerDashboard() {
     } catch (err) { alert("خطأ في السيرفر"); } finally { setLoadingAdd(false); }
   }
 
-  // ميزة الحذف - مربوطة مع الـ API تبعك
+
   async function handleDelete(productId) {
     if (!confirm("هل أنت متأكد من حذف هذا المنتج نهائياً؟")) return;
 
@@ -241,6 +241,6 @@ export default function SellerDashboard() {
           </section>
         </div>
       </div>
-    </div>//sadasdasdasd
+    </div>
   )
 }

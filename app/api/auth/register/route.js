@@ -41,7 +41,7 @@ export async function POST(req) {
     // إنشاء توكن الدخول
     const token = signToken({ id: user.id, email: user.email, role: user.role })
 
-    // إرجاع النتيجة مع إضافة حقل الاسم (Name) ليظهر في الـ Navbar
+    // اضافة الاسم في النافبار
     const res = NextResponse.json({ 
       ok: true, 
       user: { 

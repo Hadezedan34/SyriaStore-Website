@@ -32,7 +32,7 @@ model Product {
   orders      Order[]
 }
 
-// نموذج الطلب (تعديل الـ ID والـ productId ليتوافق مع MongoDB)
+
 model Order {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   customerName  String

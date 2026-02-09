@@ -60,7 +60,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* شريط البحث الذكي */}
+          {/* شريط البحث  */}
           <div className="flex-1 max-w-xl mx-4 hidden sm:block">
             <div className="relative group text-right" dir="rtl">
               <input
@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* قسم المستخدم والسلة */}
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
             
-            {/* زر مراقبة الطلبات (يظهر للجميع كزبائن) */}
+            {/* زر مراقبة الطلبات  */}
             <Link 
               href="/orders" 
               className="hidden md:flex items-center gap-1 text-xs font-bold text-gray-300 hover:text-[#ffce00] transition px-2 border-l border-white/10"

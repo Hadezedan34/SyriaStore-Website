@@ -27,11 +27,11 @@ export default function RegisterPage() {
         return setError(data.error || 'فشل التسجيل')
       }
 
-      // --- الخطوة السحرية لإظهار الاسم فوق ---
-      // نخزن بيانات المستخدم في المتصفح
+      
+     
       localStorage.setItem('user', JSON.stringify(data.user))
 
-      // توجيه المستخدم للصفحة الرئيسية وتحديث الموقع ليظهر الاسم فوراً
+   
       router.push('/')
       router.refresh() 
       window.location.reload();

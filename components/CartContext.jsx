@@ -4,7 +4,7 @@ import { createContext, useContext, useState, useEffect } from 'react'
 const CartContext = createContext()
 
 export function CartProvider({ children }) {
-  // تأكد أن الاسم هنا cartItems ليتطابق مع صفحة السلة
+  
   const [cartItems, setCartItems] = useState([])
 
   useEffect(() => {
@@ -39,13 +39,13 @@ export function CartProvider({ children }) {
     localStorage.removeItem('cart')
   }
 
-  // إضافة دوال الزيادة والنقصان لمنع أخطاء إضافية
+
   const increaseQuantity = (id) => { /* برمجة الزيادة */ }
   const decreaseQuantity = (id) => { /* برمجة النقصان */ }
 
   return (
     <CartContext.Provider value={{ 
-      cartItems, // تأكد أن الاسم هنا مطابق تماماً لما تطلبه في صفحة page.jsx
+      cartItems, 
       addToCart, 
       removeFromCart, 
       clearCart,

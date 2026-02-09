@@ -16,7 +16,7 @@ export default function SellerOrders() {
       }
       
       const user = JSON.parse(userData)
-      // السطر اللي عمل المشكلة حطيناه هون في مكانه الصحيح للفحص
+      
       console.log("برسل للسيرفر ID البائع:", user.id); 
 
       const res = await fetch(`/api/orders?sellerId=${user.id}`)

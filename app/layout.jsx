@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <main className="max-w-7xl mx-auto p-4 min-h-screen">
             {children}
           </main>
-          {/* يمكنك إضافة Footer هنا لاحقاً */}
+          {}
         </CartProvider>
       </body>
     </html>

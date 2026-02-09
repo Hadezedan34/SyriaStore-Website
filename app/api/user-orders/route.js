@@ -8,7 +8,7 @@ export async function GET(req) {
 
   try {
     const orders = await prisma.order.findMany({
-      where: all ? {} : { customerPhone: phone }, // إذا بائع يجلب الكل، إذا مشتري يجلب برقم الهاتف
+      where: all ? {} : { customerPhone: phone }, 
       include: { product: true },
       orderBy: { createdAt: 'desc' }
     })

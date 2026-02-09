@@ -11,7 +11,7 @@ export default function AddToCartButton({ productId }) {
 
     const formData = new FormData(e.currentTarget)
     
-    // تجهيز البيانات مع ضمان أن productId نصي
+    
     const payload = {
       customerName: formData.get('name'),
       customerPhone: formData.get('phone'),

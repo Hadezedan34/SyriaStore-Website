@@ -1,11 +1,11 @@
 'use client'
 import { useEffect } from 'react'
 import Link from 'next/link'
-import confetti from 'canvas-confetti' // سأخبرك كيف تثبتها
+import confetti from 'canvas-confetti'
 
 export default function SuccessPage() {
   useEffect(() => {
-    // إطلاق "فتاش" احتفالي عند تحميل الصفحة
+    
     confetti({
       particleCount: 150,
       spread: 70,

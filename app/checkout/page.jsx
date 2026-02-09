@@ -25,7 +25,7 @@ export default function CheckoutPage() {
     if (data) {
       const parsedData = JSON.parse(data)
       
-      // منطق مرن: تحويل البيانات لتنسيق موحد (Normalization)
+    
       const normalizedData = parsedData.map(item => ({
         id: item.id || item._id,
         name: item.name || item.title || item.productName || "منتج بدون اسم",
@@ -37,7 +37,7 @@ export default function CheckoutPage() {
     }
   }, [])
 
-  // حساب المجموع الفرعي بدقة
+  // حساب المجموع  
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0)
   const totalAmount = subtotal + selectedCity.deliveryFee
 
@@ -59,9 +59,9 @@ export default function CheckoutPage() {
       })
 
       if (res.ok) {
-  // بدل الـ alert القديم
-  localStorage.removeItem('cart') // تنظيف السلة
-  router.push('/checkout/success') // الانتقال لصفحة الاحتفال
+  
+  localStorage.removeItem('cart') 
+  router.push('/checkout/success') 
 } else {
         alert("فشل في إرسال الطلب")
       }

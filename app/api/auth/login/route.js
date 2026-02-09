@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
-import bcrypt from 'bcrypt' // أضف هذا السطر في الأعلى
+import bcrypt from 'bcrypt' 
 import prisma from '../../../../lib/prisma' 
-import { signToken } from '../../../../lib/auth' // استورد دالة التوكن مثل الريجستر
+import { signToken } from '../../../../lib/auth' 
 
 export async function POST(req) {
   try {

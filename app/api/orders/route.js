@@ -32,7 +32,7 @@ export async function GET(req) {
       return NextResponse.json(orders);
     }
 
-    // ج- حالة احتياطية إذا لم يتم إرسال أي فلتر (اختياري)
+    // ج- حالة احتياطية إذا لم يتم إرسال أي فلتر ()
     return NextResponse.json([]);
   } catch (error) {
     console.error("GET Error:", error.message);
@@ -85,7 +85,7 @@ export async function POST(req) {
   }
 }
 
-// 3. تحديث حالة الطلب (PATCH) - لزر "تأكيد الإرسال" عند البائع
+// لزر "تأكيد الإرسال" عند البائع
 export async function PATCH(req) {
   try {
     const { orderId, newStatus } = await req.json();

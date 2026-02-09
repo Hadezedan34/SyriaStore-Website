@@ -3,7 +3,7 @@ import prisma from '../../../../lib/prisma';
 
 export async function POST(req) {
   try {
-    const body = await req.json(); // سنستخدم JSON بدلاً من FormData لضمان وصول البيانات
+    const body = await req.json(); 
     const { title, description, price, category, image, sellerId } = body;
 
     console.log("البيانات الواصلة للسيرفر:", { title, price, sellerId });
@@ -19,7 +19,7 @@ export async function POST(req) {
         price: parseFloat(price),
         image: image,
         category: category || "Other",
-        sellerId: sellerId, // الحقل كما هو في السكيما
+        sellerId: sellerId,    
       },
     });
 

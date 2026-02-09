@@ -18,7 +18,7 @@ export default function HomePage() {
 
 
 
-  // التصنيفات الجديدة حسب طلبك
+  // التصنيفات 
 
   const categories = [
 
@@ -96,7 +96,7 @@ export default function HomePage() {
 
      
 
-      {/* القائمة الجانبية بتصنيفاتك الجديدة */}
+      {/* القائمة الجانبية   */}
 
       <aside className="w-full md:w-64 shrink-0">
 
